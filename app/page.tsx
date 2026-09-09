@@ -14,8 +14,16 @@ const leaders = [
 ];
 
 const news = [
-  { date: "9 sep 2026", title: "FantasyFloorball byggs inför pilotsäsongen", text: "Första versionen testas i Herrar Division 2 Värmland." },
-  { date: "9 sep 2026", title: "Så ska poängen räknas", text: "Riktiga matchhändelser omvandlas till Fantasy-poäng enligt fasta regler." },
+  {
+    date: "9 sep 2026",
+    title: "FantasyFloorball byggs inför pilotsäsongen",
+    text: "Första versionen testas i Herrar Division 2 Värmland.",
+  },
+  {
+    date: "9 sep 2026",
+    title: "Så ska poängen räknas",
+    text: "Riktiga matchhändelser omvandlas till Fantasy-poäng enligt fasta regler.",
+  },
 ];
 
 export default function Home() {
@@ -24,16 +32,19 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="FantasyFloorball startsida">
           <span className="brand-ball" aria-hidden="true">●</span>
-          <span><strong>FANTASY</strong><b>FLOORBALL</b></span>
+          <span>
+            <strong>FANTASY</strong>
+            <b>FLOORBALL</b>
+          </span>
         </a>
 
         <nav className="main-nav" aria-label="Huvudmeny">
           <a className="active" href="#top">Hem</a>
-          <a href="#how">Så funkar det</a>
+          <a href="#how">Mitt lag</a>
+          <a href="#how">Spelare</a>
           <a href="#stats">Statistik</a>
           <a href="#league">Liga</a>
           <a href="#news">Nyheter</a>
-          <a href="#faq">FAQ</a>
         </nav>
 
         <div className="header-actions">
@@ -45,8 +56,14 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">RIKTIGA SPELARE. RIKTIGA MATCHER.</p>
-          <h1>DITT LAG.<br /><span>DIN LIGA.</span></h1>
-          <p className="hero-text">FantasyFloorball är spelet där du sätter ihop ditt eget lag av verkliga innebandyspelare och samlar poäng baserat på deras prestationer i riktiga matcher.</p>
+          <h1>
+            DITT LAG.<br />
+            <span>DIN LIGA.</span>
+          </h1>
+          <p className="hero-text">
+            FantasyFloorball är spelet där du bygger ditt eget lag av verkliga
+            innebandyspelare och samlar poäng på deras prestationer i riktiga matcher.
+          </p>
           <div className="hero-actions">
             <button className="btn btn-primary btn-large">Skapa konto <span>→</span></button>
             <a className="btn btn-outline btn-large" href="#how">Så funkar det <span>→</span></a>
@@ -85,7 +102,10 @@ export default function Home() {
           <div className="pilot-copy">
             <p className="section-kicker">SÄSONG 2026/27</p>
             <h2>HERRAR DIVISION 2<br /><span>VÄRMLAND</span></h2>
-            <p>Vi startar med en sluten pilotsäsong i Herrar Division 2 Värmland. Riktiga matcher. Riktig data. Riktig fantasy.</p>
+            <p>
+              Vi startar med en sluten pilotsäsong i Herrar Division 2 Värmland.
+              Riktiga matcher. Riktig data. Riktig fantasy.
+            </p>
             <button className="btn btn-outline">Läs mer om pilotsäsongen <span>→</span></button>
           </div>
         </article>
@@ -96,8 +116,11 @@ export default function Home() {
             <span>Vecka 1</span>
           </div>
           <div className="countdown">
-            {[['12','Dagar'],['07','Timmar'],['24','Minuter'],['18','Sekunder']].map(([value,label]) => (
-              <div key={label}><strong>{value}</strong><span>{label}</span></div>
+            {[["12", "Dagar"], ["07", "Timmar"], ["24", "Minuter"], ["18", "Sekunder"]].map(([value, label]) => (
+              <div key={label}>
+                <strong>{value}</strong>
+                <span>{label}</span>
+              </div>
             ))}
           </div>
           <button className="btn btn-outline">Se spelschema <span>→</span></button>
@@ -129,25 +152,24 @@ export default function Home() {
             <a href="#stats">Visa alla</a>
           </div>
           <div className="leaderboard">
-            {leaders.map(([rank,name,points]) => (
+            {leaders.map(([rank, name, points]) => (
               <div className="leader-row" key={rank}>
-                <strong>{rank}</strong><span>{name}</span><b>{points}</b>
+                <strong>{rank}</strong>
+                <span>{name}</span>
+                <b>{points}</b>
               </div>
             ))}
           </div>
         </aside>
       </section>
 
-      <section className="principles" id="faq">
-        <p className="section-kicker">FANTASY SOM GÅR ATT FÖLJA</p>
-        <h2>OFFICIELL DATA IN.<br /><span>TYDLIGA REGLER UT.</span></h2>
-        <p>FantasyFloorball ska vara enkelt att förstå. Officiella matchhändelser hämtas in och omvandlas till poäng enligt fasta regler som gäller lika för alla.</p>
-      </section>
-
       <footer>
         <a className="brand" href="#top">
           <span className="brand-ball" aria-hidden="true">●</span>
-          <span><strong>FANTASY</strong><b>FLOORBALL</b></span>
+          <span>
+            <strong>FANTASY</strong>
+            <b>FLOORBALL</b>
+          </span>
         </a>
         <p>En del av innebandyn.</p>
         <nav>
